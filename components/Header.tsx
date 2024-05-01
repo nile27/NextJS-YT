@@ -14,7 +14,8 @@ const Header = ({ children }: LayoutProps) => {
             src="https://images.unsplash.com/photo-1707833558984-3293e794031c"
           />
         </div>
-        <div className="absolute top-0 bg-black opacity-40 w-full h-full"></div>
+        <div className="absolute h-[400px] top-0 bg-black opacity-40 w-full "></div>
+        <div className="absolute h-[400px] top-0 bg-gradient-to-t from-black w-full "></div>
       </section>
       <section>{children}</section>
     </header>
