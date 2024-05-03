@@ -6,6 +6,7 @@ import { FaChromecast } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import Usericon from "@/components/Usericon";
 import PagePadding from "./PagePadding";
+import useUiState from "@/hooks/useUiState";
 
 import {
   Drawer,
@@ -46,6 +47,7 @@ const HeaderDrawer = ({ children }: any) => {
 };
 
 const Header = ({ children }: LayoutProps) => {
+  const { headerImageSrc } = useUiState();
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const headRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
@@ -69,7 +71,10 @@ const Header = ({ children }: LayoutProps) => {
             fill
             alt="background-img"
             className="object-cover"
-            src="https://images.unsplash.com/photo-1707833558984-3293e794031c"
+            src={
+              headerImageSrc ||
+              "https://images.unsplash.com/photo-1707833558984-3293e794031c"
+            }
           />
         </div>
         <div className="absolute h-[400px] top-0 bg-black opacity-40 w-full "></div>
