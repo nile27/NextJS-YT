@@ -314,7 +314,7 @@
     "@babel/runtime" "^7.13.10"
     "@radix-ui/react-slot" "1.0.2"
 
-"@radix-ui/react-slot@1.0.2":
+"@radix-ui/react-slot@1.0.2", "@radix-ui/react-slot@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.0.2.tgz#a9ff4423eade67f501ffb32ec22064bc9d3099ab"
   integrity sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==
@@ -946,6 +946,24 @@ electron-to-chromium@^1.4.668:
   version "1.4.750"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.750.tgz#d278a619af727ed069de1317115187282b1131ee"
   integrity sha512-9ItEpeu15hW5m8jKdriL+BQrgwDTXEL9pn4SkillWFu73ZNNNQ2BKKLS+ZHv2vC9UkNhosAeyfxOf/5OSeTCPA==
+
+embla-carousel-react@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.0.3.tgz#a3610b73ee64b98b34a4145d56c1bd5a2575d8b0"
+  integrity sha512-kWRqu6S9FV7K1mKNBNmMiU8ZXLAOXHy352F6/3T8rF5/fV/pnKF/X5i5gRWvOoPT/tbvC3xQi3vAvJZ+SxsIDw==
+  dependencies:
+    embla-carousel "8.0.3"
+    embla-carousel-reactive-utils "8.0.3"
+
+embla-carousel-reactive-utils@8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.0.3.tgz#4ed56d3310a30902b62b3c40834b5e6e339017cd"
+  integrity sha512-9qvdSZJsFh6JokPNJYfsU6J8uDX9sDjBuUsmshuY3y3wS6JPwuE5d45i04DDNV9EB/7hwQew5qwRiemo3CwrIw==
+
+embla-carousel@8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.0.3.tgz#220ad25a32f04f91f800b04125e6444802f9c886"
+  integrity sha512-ThQxBJeAQ8tS1LjBKS5ZoMfRCNXfuK93VrslWnNFmCKG45ir2AniCIMx+bYhaNA8lxwelfPXj1cEiZlHXk7IpQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"

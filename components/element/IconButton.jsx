@@ -6,7 +6,8 @@ const IconButton = ({ icon, onClickIcon = () => {} }) => {
       <div
         onClick={onClickIcon}
         className="flex items-center justify-center w-[36px] h-[36px]
-       hover:bg-[rgba(144, 144,144,0.45] rounded-full cursor-pointer"
+        rounded-full cursor-pointer hover:bg-[rgba(144,144,144,0.45)]
+        "
       >
         {icon}
       </div>
