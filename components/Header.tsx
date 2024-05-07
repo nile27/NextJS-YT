@@ -53,7 +53,7 @@ const Header = ({ children }: LayoutProps) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollValue = headRef?.current?.scrollTop;
-      console.log("-->scrollValue", scrollValue);
+      // console.log("-->scrollValue", scrollValue);
       setIsScrolled(scrollValue !== 0);
     };
 

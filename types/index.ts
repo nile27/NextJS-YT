@@ -7,7 +7,7 @@ export interface Song {
 }
 
 export interface TopSong extends Song {
-  prevRang: number;
+  prevRank: number;
   rank: number;
 }
 
