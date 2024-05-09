@@ -1,5 +1,5 @@
 "use client";
-import { TopSong } from "@/types";
+import { Song } from "@/types";
 import Image from "next/image";
 import React from "react";
 import { FaCircle } from "react-icons/fa";
@@ -11,12 +11,18 @@ import {
   FiMoreVertical,
 } from "react-icons/fi";
 import IconButton from "./element/IconButton";
+import { useRouter } from "next/navigation";
 
-interface SongCardProps {
-  song: TopSong;
+interface SongCardRowExpandProps {
+  song: Song;
 }
 
-const SongCard: React.FC<SongCardProps> = ({ song }) => {
+const SongCard: React.FC<SongCardRowExpandProps> = ({ song }) => {
+  const { channel, channelId } = song;
+  const { push } = useRouter();
+  const onClickChannel = () => {
+    push(`/channel/${channelId}`);
+  };
   return (
     <article
       className="flex flex-row gap-4 items-center 
@@ -30,21 +36,17 @@ const SongCard: React.FC<SongCardProps> = ({ song }) => {
         </section>
       </div>
       <div className=" flex flex-row items-center gap-4">
-        <div>
-          {song.rank === song.prevRank ? (
-            <FaCircle size={8} />
-          ) : song.rank > song.prevRank ? (
-            <AiOutlineCaretUp size={10} color="#3CA63F" />
-          ) : (
-            <AiOutlineCaretDown size={10} color="#FF0000" />
-          )}
-        </div>
-        <div>{song.rank + 1}</div>
-        <div>
-          <div>{song.name}</div>
+        <div className=" flex flex-row gap-4 justify-between basis-1/3">
+          <div className=" w-[130px] truncate">{song.name}</div>
+          <div
+            onClick={onClickChannel}
+            className=" text-neutral-500 hover:underline cursor-pointer"
+          >
+            {channel}
+          </div>
         </div>
       </div>
-      <section className="hidden group-hover:flex absolute top-0 right-0 items-center flex-row h-[40px] 2-full justify-end  w-1/2 bg-black bg-[rgba(0,0,0,0.7)]">
+      <section className="hidden group-hover:flex absolute top-0 right-0 items-center flex-row h-[40px] 2-full justify-end  w-[120px] bg-black bg-[rgba(0,0,0,0.7)]">
         <IconButton icon={<FiThumbsDown size={20} />} />
         <IconButton icon={<FiThumbsUp size={20} />} />
         <IconButton icon={<FiMoreVertical size={20} />} />
