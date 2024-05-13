@@ -18,7 +18,7 @@ export function getRandomElementFromArray(arr: any[]) {
   return arr[getRandomInt(0, len - 1)];
 }
 
-export function chunkArray(arr: any[], chunkSize: number) {
+export function chunkArray(arr: unknown[], chunkSize: number) {
   const resultArray = [];
   for (let i = 0; i < arr.length; i += chunkSize) {
     const chunk = arr.slice(i, i + chunkSize);
