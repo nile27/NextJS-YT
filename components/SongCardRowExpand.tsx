@@ -17,7 +17,7 @@ interface SongCardRowExpandProps {
   song: Song;
 }
 
-const SongCard: React.FC<SongCardRowExpandProps> = ({ song }) => {
+const SongCardRowExpand: React.FC<SongCardRowExpandProps> = ({ song }) => {
   const { channel, channelId } = song;
   const { push } = useRouter();
   const onClickChannel = () => {
@@ -55,4 +55,4 @@ const SongCard: React.FC<SongCardRowExpandProps> = ({ song }) => {
   );
 };
 
-export default SongCard;
+export default SongCardRowExpand;
