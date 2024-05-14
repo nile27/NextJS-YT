@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/themeProvider";
 import { sleep } from "@/lib/utils";
 
 import { Sidebar } from "@/components/Sidebar";
+import PlayerWrapper from "@/components/player/PlayerWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <Sidebar>{children}</Sidebar>
+          <PlayerWrapper />
         </ThemeProvider>
       </body>
     </html>
